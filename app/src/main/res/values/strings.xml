@@ -4,4 +4,7 @@
     <string name="hint">save words and click on output to check anagram count</string>
     <string name="anagram_count">Anagram count</string>
     <string name="output">Output</string>
+    <string name="grouped_anagrams">Grouped Anagrams:</string>
+    <string name="words_you_ve_entered">Words you\'ve entered:</string>
+    <string name="clear">clear</string>
 </resources>

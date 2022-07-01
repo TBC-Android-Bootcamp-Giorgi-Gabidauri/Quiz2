@@ -22,12 +22,20 @@ class MainActivity : AppCompatActivity() {
                 addToList(etAnagram.text.toString())
                 Snackbar.make(binding.cl, "Saved (your word: <${etAnagram.text}> added to list of words)", Snackbar.LENGTH_SHORT)
                     .setAnchorView(binding.btnOutput).show()
+                tvSeeWords.text = "Words you've entered: \n $list"
             }
             btnOutput.setOnClickListener {
-                tvAnagramCount.text = "Anagram count \n ${groupAnagrams(list).size}"
+                val groupedAnagrams = groupAnagrams(list)
+                tvAnagramCount.text = "Anagram count \n ${groupedAnagrams.size}"
+                tvSeeAnagrams.text = "grouped Anagrams: \n $groupedAnagrams"
+            }
+            btnClear.setOnClickListener {
+                list = mutableListOf()
+                tvSeeWords.text = getString(R.string.words_you_ve_entered)
+                tvSeeAnagrams.text = getString(R.string.grouped_anagrams)
+                tvAnagramCount.text = getString(R.string.anagram_count)
             }
         }
-
     }
 
     private fun addToList(input: String) {
@@ -42,13 +50,10 @@ class MainActivity : AppCompatActivity() {
             str.forEach {
                 key[it] = (key[it] ?: 0) + 1
             }
-
             resultingMap[key] = (resultingMap[key] ?: listOf()) + str
         }
-
         return resultingMap.values.toList()
     }
-
 }
 
 

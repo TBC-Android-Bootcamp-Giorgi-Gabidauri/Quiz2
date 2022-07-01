@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/cl"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".MainActivity">
@@ -11,37 +11,64 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvAnagramCount"
         android:layout_width="match_parent"
-        android:text="@string/anagram_count"
-        android:gravity="center"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/anagram_count"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/etAnagram"
-        android:layout_marginTop="@dimen/dimen_20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dimen_20dp"
         android:hint="@string/hint"
-        app:layout_constraintTop_toBottomOf="@id/tvAnagramCount"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAnagramCount" />
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_20dp"
-        app:layout_constraintStart_toStartOf="parent"
         android:text="@string/save"
-        app:layout_constraintTop_toBottomOf="@id/etAnagram"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etAnagram" />
 
     <Button
         android:id="@+id/btnOutput"
         android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/dimen_20dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/dimen_20dp"
         android:text="@string/output"
-        app:layout_constraintTop_toBottomOf="@id/btnSave"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSave" />
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:text="@string/clear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOutput" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSeeWords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:text="@string/words_you_ve_entered"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnClear" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSeeAnagrams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:text="@string/grouped_anagrams"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSeeWords" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
