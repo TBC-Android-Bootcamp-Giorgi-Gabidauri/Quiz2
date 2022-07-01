@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Anagrams</string>
+    <string name="save">Save</string>
+    <string name="hint">save words and click on output to check anagram count</string>
+    <string name="anagram_count">Anagram count</string>
+    <string name="output">Output</string>
+</resources>
